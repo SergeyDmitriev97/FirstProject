@@ -9,6 +9,7 @@
     --size-49: 49px;
     --line-height30: 30px;
     --line-height35: 35px;
+    --font-family: Inter;
     --main-block-width: 1200px;
     --main-text-color: #fff;
     --green-background-color: #33C37E;
@@ -19,6 +20,7 @@
 body {
     background-color: var(--violet-background-color);
     margin: 0;
+    font-family: Inter;
 }
 
 .main {
@@ -133,13 +135,13 @@ body {
         margin-left: var(--indetation-187);
         margin-right: var(--indetation-187);
     }
+
     .slider-parent {
         overflow-x: scroll;
         overflow-y: hidden;
         white-space: nowrap;
         display: flex;
         margin-left: var(--indetation-187);
-        margin-right: var(--indetation-187);
         margin-bottom: 258px;
 
         .slider-parent-card {
@@ -153,21 +155,34 @@ body {
                 display: grid;
                 place-items: center;
             }
-            .slider-parent-card-header{
+
+            .slider-parent-card-header {
                 color: var(--card-text-color);
                 margin-top: var(--indentation-32);
                 margin-bottom: var(--indentation-32);
                 font-size: 39px;
             }
+
             .slider-parent-card-text {
                 color: var(--card-text-color);
                 font-size: var(--size-20);
                 line-height: var(--line-height30);
-                white-space: initial;    
+                white-space: initial;
             }
 
         }
 
+        .slider-parent-card:hover {
+            background-color: var(--main-text-color);
+
+            .slider-parent-card-header {
+                color: var(--violet-background-color);
+            }
+
+            .slider-parent-card-text {
+                color: var(--violet-background-color);
+            }
+        }
     }
 
 }
@@ -305,4 +320,11 @@ button.view-collection {
     color: var(--main-text-color);
     width: 169px;
     height: 72px;
+    border: 0px;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("./Fonts/Inter-V.ttf") format('truetype');
+    font-style: normal;
 }
